@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Escopo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            console.log(name)
+            var name = 'vieira'
+            var name = 'sandro'
+
+            let given = 'vieira'
+            console.log(given)
+
+            const car = {
+                name: 'ford',
+                color: 'red'
+            }
+
+            car.name = 'fiat'
+            Object.freeze(car)
+            car.name = 'chevrolet'
+
+            console.log(car)
+        </script>
+    </body>
+</html>
