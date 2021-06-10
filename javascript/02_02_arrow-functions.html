@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Arrow functions</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function sum(num1, num2) {
+                return num1 + num2
+            }
+
+            const arrowSum = (num1, num2) => {
+                return num1 + num2
+            }
+
+            const arrowSumOneLine = (num1, num2) => num1 + num2
+
+            const hello = name => console.log(`Hello ${name}`)
+
+            console.log(sum(1,2))
+            console.log(arrowSum(3,4))
+            console.log(arrowSumOneLine(5,6))
+            hello('Fulano')
+        </script>
+    </body>
+</html>
