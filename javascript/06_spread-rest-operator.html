@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Arrow functions</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Spread-Rest Operator</h1>
+        <script>
+            //sampe 1
+            const numbers = [1, 2, 3, 4, 5]
+            console.log([...numbers, 6, 7, 8])
+            console.log([...numbers, 6, 7, 8, ...numbers])
+
+            //sample 2
+            const name = "Fulano"
+            console.log(...name, 'name')
+
+            //sample 3
+            function sum(firstNumber, secondNumber) {
+                console.log(firstNumber)
+                console.log(secondNumber)
+                return firstNumber + secondNumber
+            }
+
+            const number = [1,2]
+            sum(...number)
+
+            //sample 4
+            function multiply(...numbers) {
+                console.log([...numbers], 'numbers')                
+                const arr = numbers.map(number => number * 2)
+                return arr
+            }
+
+            console.log(multiply(1, 2, 3, 4, 5))
+
+            //sample 5
+            const object1 = {
+                name: "nameObject"
+            }
+
+            const object2 = {
+                color: "red"
+            }
+
+            const joinObjects = {...object1, ...object2}
+            console.log("objects", joinObjects)
+        </script>
+    </body>
+</html>
