@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Arrow functions</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Classes</h1>
+        <h3>See Console for output</h3>
+        <script>
+            class Person {
+                constructor(name) {
+                    this.name = name
+                }
+
+                hello() {
+                    console.log(`Welcome ${this.name}`)
+                }
+            }
+
+            class Age extends Person {
+                constructor(name, age) {
+                    super(name)
+                    this.name = name //JS old versions requires this line
+                    this.age = age
+                }
+
+                showAge() {
+                    console.log(`Hello ${this.name} your age is ${this.age}`)
+                }
+            }
+            
+            const maycon = new Person('Maycon')
+            console.log(maycon)
+            const mayconAge = new Age('Maycon', '30')
+            console.log(mayconAge)
+        </script>
+    </body>
+</html>

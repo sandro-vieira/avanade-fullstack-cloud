@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Arrow functions</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Async - Await</h1>
+        <h3>See Console for output</h3>
+        <script>
+            async function getRepository() {
+                const repository = await fetch('https://api.github.com/users/mayconbalves/repos?per_page=50')
+                const data = await repository.json()
+                console.log(data)
+            } 
+
+            getRepository()
+        </script>
+    </body>
+</html>
